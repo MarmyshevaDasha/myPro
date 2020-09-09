@@ -42,7 +42,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-        android:text="Button"
+        android:text="Кнопка"
+        android:textSize="32sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
