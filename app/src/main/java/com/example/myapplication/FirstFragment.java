@@ -1,11 +1,14 @@
 package com.example.myapplication;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+
+import java.util.Random;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -24,20 +27,16 @@ public class FirstFragment extends Fragment {
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-        view.findViewById(R.id.button_first).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                NavHostFragment.findNavController(FirstFragment.this)
-                        .navigate(R.id.action_FirstFragment_to_SecondFragment);
-            }
-        });
-        Button button = view.findViewById(R.id.mybutton);
-        final TextView myTextView = view.findViewById(R.id.mytextView);
+        final String[] words = getResources().getStringArray(R.array.crocodile);
+        final Random random = new Random();
+        final TextView textWord = view.findViewById(R.id.textWord);
+        Button button = view.findViewById(R.id.buttonWord);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                myTextView.setText(R.string.my_string1);
+                int randomInt = random.nextInt(4);
+                textWord.setText(words[randomInt]);
+                Log.d("Random Int", Integer.toString(randomInt));
             }
         });
     }

@@ -9,6 +9,15 @@
 
     <string name="hello_first_fragment">Hello,Dasha!</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-    <string name="my_string">Моя программа</string>
-    <string name="my_string1">Я нажала на кнопку</string>
+    <string name="my_string">My app</string>
+    <string name="my_string1">I pressed on button</string>
+    <string name="press_me">Press me</string>
+    <string name="words">Are you ready?</string>
+    <string-array name="crocodile">
+        <item>Monkey</item>
+        <item>House</item>
+        <item>Dog</item>
+        <item>Car</item>
+        <item>Bed</item>
+    </string-array>
 </resources>
